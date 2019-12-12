@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Label, MultiDataSet } from 'ng2-charts';
+import { ChartType, ChartOptions } from 'chart.js';
 import { HttpService } from '../app.service';
-import { ChartOptions, ChartType } from 'chart.js';
-import { Label } from 'ng2-charts';
 import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 
 @Component({
-  selector: 'app-all-topics',
-  templateUrl: './all-topics.component.html',
-  styleUrls: ['./all-topics.component.scss']
+  selector: 'app-banned-topics',
+  templateUrl: './banned-topics.component.html',
+  styleUrls: ['./banned-topics.component.scss']
 })
-export class AllTopicsComponent implements OnInit {
+export class BannedTopicsComponent implements OnInit {
 
   constructor(private httpService: HttpService) { }
 
-  topics: any[];
+  topicsBannedCount: any[];
   showChart = false;
   pieChartOptions: ChartOptions;
   pieChartLabels: Label[];
@@ -23,8 +23,8 @@ export class AllTopicsComponent implements OnInit {
   pieChartPlugins: any[];
 
   ngOnInit() {
-    this.httpService.getCountTopics().subscribe(response => {
-      this.topics = response;
+    this.httpService.getTopicsBannedCount().subscribe(response => {
+      this.topicsBannedCount = response;
       this.buildChart();
     });
   }
@@ -44,8 +44,8 @@ export class AllTopicsComponent implements OnInit {
         },
       }
     };
-    this.pieChartLabels = Object.keys(this.topics);
-    this.pieChartData = Object.values(this.topics);
+    this.pieChartLabels = Object.keys(this.topicsBannedCount);
+    this.pieChartData = Object.values(this.topicsBannedCount);
     this.pieChartType = 'pie';
     this.pieChartLegend = true;
     this.pieChartPlugins = [pluginDataLabels];

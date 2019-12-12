@@ -7,11 +7,13 @@ import { ApiUrlInterceptor } from './api-url.interceptor';
 import { AllTopicsComponent } from './all-topics/all-topics.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpService } from './app.service';
+import { BannedTopicsComponent } from './banned-topics/banned-topics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AllTopicsComponent
+    AllTopicsComponent,
+    BannedTopicsComponent
   ],
   imports: [
     BrowserModule,
