@@ -17,4 +17,8 @@ export class HttpService {
   getTopicsBannedCount(): Observable<any[]> {
     return this.http.get<any[]>('topics/bannedCount');
   }
+
+  getTextBannedCount(): Observable<any[]> {
+    return this.http.get<any[]>('texts/filteredCount');
+  }
 }

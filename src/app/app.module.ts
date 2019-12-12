@@ -8,12 +8,14 @@ import { AllTopicsComponent } from './all-topics/all-topics.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpService } from './app.service';
 import { BannedTopicsComponent } from './banned-topics/banned-topics.component';
+import { TextBannedCountComponent } from './text-banned-count/text-banned-count.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllTopicsComponent,
-    BannedTopicsComponent
+    BannedTopicsComponent,
+    TextBannedCountComponent
   ],
   imports: [
     BrowserModule,
