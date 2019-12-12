@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": false,
+  "search.exclude": {
+    "./node_modules/**/*": true,
+    "./public/**/*": true,
+    "./api/**/*": true,
+    "./server/**/*": true
+  },
+  "tslint.autoFixOnSave": false,
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
