@@ -9,13 +9,15 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpService } from './app.service';
 import { BannedTopicsComponent } from './banned-topics/banned-topics.component';
 import { TextBannedCountComponent } from './text-banned-count/text-banned-count.component';
+import { TopUsersComponent } from './top-users/top-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllTopicsComponent,
     BannedTopicsComponent,
-    TextBannedCountComponent
+    TextBannedCountComponent,
+    TopUsersComponent
   ],
   imports: [
     BrowserModule,

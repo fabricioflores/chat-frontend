@@ -21,4 +21,8 @@ export class HttpService {
   getTextBannedCount(): Observable<any[]> {
     return this.http.get<any[]>('texts/filteredCount');
   }
+
+  getCountyByPlayer(): Observable<any[]> {
+    return this.http.get<any[]>('texts/countByPlayerTop');
+  }
 }
