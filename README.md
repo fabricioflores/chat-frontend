@@ -4,7 +4,7 @@
 
 - clone the app
 - npm install
-- ng start
+- npm run dev or ng serve
 
 ## Preview
 
